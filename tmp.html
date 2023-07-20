@@ -1,0 +1,92 @@
+<div class="" id="myForm">
+
+    <h4 class="text-center">Enquire Now</h4>    <form autocomplete="off" method="post" name="login-form" class="mt-4">
+        <input type="hidden" name="type" value="inline">
+
+                <div class="form-group  ">
+            <div class="d-flex align-items-center text-blue brc-blue-m2">
+                <input type="text" class="form-control form-control-sm shadow-none" placeholder="Name *" id="id-name" name="lead_name" value="">
+                <i class="fa fa-user text-grey-m2 ml-n4"></i>
+            </div>
+        </div>
+        <div class="form-group   ">
+            <div class="d-flex align-items-center text-blue brc-blue-m2">
+                <input type="text" class="form-control form-control-sm shadow-none" placeholder="Email *" id="id-email" name="email_id" value="">
+                <i class="fa fa-envelope text-grey-m2 ml-n4"></i>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-prepend" style="height:32px;">
+                        <span class="input-group-text">+91</span>
+                    </div>
+                    <input type="text" class="form-control form-control-sm" maxlength="10" placeholder="Mobile Number*" id="id-mobile" name="mobile_no" value="">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center input-floating-label text-blue brc-blue-m2">
+                    <select class="form-control fom-control-sm" name="state_id" id="state_id">
+                        <option value="0">State *</option>
+                        <option value="30">Andaman and Nicobar Islands</option><option value="1">Andhra Pradesh</option><option value="2">Arunachal Pradesh</option><option value="3">Assam</option><option value="4">Bihar</option><option value="31">Chandigarh</option><option value="5">Chhattisgarh</option><option value="32">Dadra and Nagar Haveli</option><option value="33">Daman and Diu</option><option value="34">Delhi</option><option value="6">Goa</option><option value="7">Gujarat</option><option value="8">Haryana</option><option value="9">Himachal Pradesh</option><option value="10">Jammu and Kashmir</option><option value="11">Jharkhand</option><option value="12">Karnataka</option><option value="13">Kerala &amp; Mahe</option><option value="35">Lakshadweep</option><option value="14">Madhya Pradesh</option><option value="15">Maharashtra</option><option value="16">Manipur</option><option value="17">Meghalaya</option><option value="18">Mizoram</option><option value="19">Nagaland</option><option value="20">Odisha</option><option value="21">Punjab</option><option value="22">Rajasthan</option><option value="23">Sikkim</option><option value="24">Tamil Nadu &amp; Puducherry (UT)</option><option value="25">Telangana</option><option value="26">Tripura</option><option value="27">Uttar Pradesh</option><option value="28">Uttarakhand</option><option value="29">West Bengal</option>                        <option value="999">Others or Foriegn</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center input-floating-label text-blue brc-blue-m2">
+                    <select class="form-control fom-control-sm" name="qual_deg_id" id="id-qual-deg">
+                        <option value="0">I am looking for*</option>
+                        <option value="1">UG</option><option value="2">PG</option><option value="3">Phd</option>                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center input-floating-label text-blue brc-blue-m2">
+                    <select class="form-control fom-control-sm" name="stream_id" id="id-stream">
+                        <option value="0">Select Stream*</option>
+                                                <option value="999">Others</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="other_stream_div" style="display:none">
+            <div class="d-flex align-items-center text-blue brc-blue-m2">
+                <input type="text" class="form-control form-control-sm shadow-none" placeholder="Enter stream  *" id="id-stream-other" name="other_stream" value="">
+            </div>
+        </div>
+        <div class="form-group  ">
+            <div class="d-flex align-items-center text-blue brc-blue-m2">
+                <input type="text" class="form-control form-control-sm shadow-none" placeholder="Enter text shown below  *" id="id-captcha1" name="captcha1" value="">
+                <i class="fa fa-image text-grey-m2 ml-n4"></i>
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label>
+                                <img style="width: 220px" src="https://aoap.amrita.edu/lead-collector-23/captcha/captcha2.php" id="captcha2"><br>
+
+            </label>
+            <a href="#" onclick="document.getElementById('captcha2').src='https://aoap.amrita.edu/lead-collector-23/captcha/captcha2.php?'+Math.random();document.getElementById('captcha-form').focus();" id="change-image" style="padding-left:15px"><i class="fa fa-undo"></i></a><br>
+        </div>
+
+                    <div class="form-group row">
+                <div class="col-md-12">
+                    <label class="" style="font-size: 12px;">
+                        By Clicking Signup/Register. I authorize Amrita Admissions Team to call me to inform about the Admission process. This consent will override any registration for DNC/NDNC
+                    </label>
+
+                </div>
+            </div>
+        
+        <div class="form-group  ">
+            <button class="btn btn-primary btn-block px-4 btn-bold mt-2 mb-4" name="create_lead" style="width: 100%">Submit</button>
+        </div>
+        
+    </form>
+    </div>

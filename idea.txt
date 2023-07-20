@@ -1,0 +1,31 @@
+Home page --
+	Apply now form(register)
+	Search programs --- goes to program page
+	Contact us - goes to contact us page
+
+
+Apply now page--
+	One form (accepting new users)
+	do you have an account(login)
+	Announcements (Classes start, allotment out .etc)
+	Campuses(Tenative)
+
+Login page--
+	Login form
+
+Regisration pages(more than one)
+	Personal Details
+	Programs
+	Payment
+	Educational details
+	Upload
+
+	Final submit takes us to the dashboard.
+
+-- Dashboard
+	Courses applied
+	Allotment(Course eligible, fee slab, campus)
+	
+
+
+
