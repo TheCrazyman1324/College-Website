@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Academic details</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    body.sidebar-open .content {
+      margin-left: 250px;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ccc6c6;
+      padding-top: 60px;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 0.5s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+
+    .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      font-family: BankGothic Md BT;
+      font-size: 20px;
+      color: #080808;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #fffcfc;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .content {
+      padding: 36px;
+      margin-left: 70px;
+      transition: 0.3s;
+    }
+
+    .open {
+      width: 250px;
+      margin-left: 250px;
+    }
+  </style>
+
+<body>
+
+  <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="personalwithsidebar.html">Personal Details</a>
+    <hr>
+    <a href="academicwithsidebar.html">Academic Details</a>
+    <hr>
+    <a href="#">Program/Campus</a>
+    <hr>
+    <a href="#">Payment</a>
+    <hr>
+    <a href="uploadwithsidebar.html">Upload Documents</a>
+  </div>
+
+  <div class="content" id="content">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 200%;
+            max-width: 2000px;
+            margin: 0 auto;
+            
+            border: 1px solid #f2f2f2;
+            border-radius: 5px;
+            
+            padding: 20px;
+           
+            display: flex;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            max-width: 2000px;
+            width: 100%;
+            
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        label {
+            font-family: Book Antiqua;
+            width: 200px;
+            margin-right: 16px;
+            text-align: right;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        
+            
+        }
+.form-group {
+            margin-bottom: 20px;
+        }
+
+
+        .form-right {
+            display: flex;
+            justify-content: right;
+        }
+        
+    
+        
+        .form-left {
+           
+            display: flex;
+            justify-content: left;
+        }
+        a{
+            color: #4CAF50;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div class="content">
+            <form action="#" method="post">
+                <h2 style="font-size: 20px; font-family: Book Antiqua ;"><u>ACADEMIC DETAILS</u></h2>
+                <fieldset>
+                <legend>Details of 12th grade qualifying exam</legend>
+                <div class="form-row">
+                <label for="Board">Board/University:</label>
+                <input type="text" name="Board" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="year">Year of Passing:</label>
+                <input type="number" name="year" min="2015" max="2023" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="school">12th Standard School:</label>
+                <input type="text" name="school" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="state">12th Standard State:</label>
+                <input type="text" name="state" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="Branch">Branch/Stream:</label>
+                <input type="text" name="Branch" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="marks">Maximum Marks:</label>
+                <input type="text" name="marks" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="marks">Total Marks Obtained:</label>
+                <input type="text" name="marks" required>
+            </div>
+            
+            
+                </fieldset><br>
+                <fieldset>
+                    <legend>Details of 10th grade qualifying exam</legend>
+                    <div class="form-row">
+                    <label for="Board">Board/University:</label>
+                    <input type="text" name="Board" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="year">Year of Passing:</label>
+                    <input type="number" name="year" min="2015" max="2023" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="school">10th Standard School:</label>
+                    <input type="text" name="school" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="state">10th Standard State:</label>
+                    <input type="text" name="state" required>
+                </div>
+                
+                
+                
+                <div class="form-row">
+                    <label for="marks">Maximum Marks:</label>
+                    <input type="text" name="marks" required>
+                </div>
+                
+                <div class="form-row">
+                    <label for="marks">Total Marks Obtained:</label>
+                    <input type="text" name="marks" required>
+                </div>
+                
+                
+                    </fieldset>
+                    <br>
+                <div class="form-group form-left">
+                    <input type="submit" value="Submit">
+                  </div>
+                  <div class=" form-right" style="border-bottom: 80px;">
+                    
+                    <input type="submit" value="Next">
+                </div>
+                </form>
+            </body>
+        </div>
+
+        <script>
+          function toggleSidebar() {
+            const body = document.querySelector('body');
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+              sidebar.style.width = '250px';
+              body.classList.add('sidebar-open'); 
+            } else {
+              sidebar.style.width = '0';
+              body.classList.remove('sidebar-open'); 
+            }
+          }
+        </script>
+            </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            

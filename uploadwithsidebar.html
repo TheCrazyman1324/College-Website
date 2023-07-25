@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>upload documents</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    body.sidebar-open .content {
+      margin-left: 250px;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ccc6c6;
+      padding-top: 60px;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 0.5s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    }
+
+    .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      font-family: BankGothic Md BT;
+      font-size: 20px;
+      color: #080808;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #fffcfc;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .content {
+      padding: 36px;
+      margin-left: 70px;
+      transition: 0.3s;
+    }
+
+    .open {
+      width: 250px;
+      margin-left: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="personalwithsidebar.html">Personal Details</a>
+    <hr>
+    <a href="academicwithsidebar.html">Academic Details</a>
+    <hr>
+    <a href="#">Program/Campus</a>
+    <hr>
+    <a href="#">Payment</a>
+    <hr>
+    <a href="uploadwithsidebar.html">Upload Documents</a>
+  </div>
+
+  <div class="content" id="content">
+    <style>
+           body {
+        font-family: Book Antiqua;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+        table {
+            width: 80%;
+        }
+        
+        td, th {
+            border: 2px solid #1a292e;
+            text-align: left;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        
+    }
+
+    </style>
+
+<body>
+    <p><u>UPLOAD DOCUMENTS </u></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Document Name</th>
+                <th>Upload File</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>SSLC/Equivalent Certificate:</td>
+                <td>
+                    <input id="file1" name="file1" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12th Original Marksheet:</td>
+                <td>
+                    <input id="file2" name="file2" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Aadhar Card:</td>
+                <td>
+                    <input id="file3" name="file3" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Transfer Certificate:</td>
+                <td>
+                    <input id="file6" name="file6" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Conduct Certificate:</td>
+                <td>
+                    <input id="file7" name="file7" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Migration Certificate:</td>
+                <td>
+                    <input id="file8" name="file8" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Jee Score Card:</td>
+                <td>
+                    <input id="file4" name="file4" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>SAT Score Card:</td>
+                <td>
+                    <input id="file5" name="file5" type="file" />
+                    <button>Upload</button>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Upload Signature:</td>
+                <td>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <button>Upload</button>
+            </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <br><br>
+    <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+</body>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const body = document.querySelector('body');
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+        body.classList.add('sidebar-open'); 
+      } else {
+        sidebar.style.width = '0';
+        body.classList.remove('sidebar-open'); 
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
