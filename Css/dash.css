@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header h1 {
+    text-align: center;
+  }
+  
+  .profile-summary {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .profile-summary img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .academic-progress,
+  .course-schedule,
+  .upcoming-assignments,
+  .important-announcements,
+  .resources,
+  .calendar {
+    margin-top: 20px;
+  }
+  
+  .academic-progress h2,
+  .course-schedule h2,
+  .upcoming-assignments h2,
+  .important-announcements h2,
+  .resources h2,
+  .calendar h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  .schedule-table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .schedule-table p {
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .settings button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .settings button:not(:last-child) {
+    margin-right: 10px;
+  }
+  

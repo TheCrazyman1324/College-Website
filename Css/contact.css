@@ -1,0 +1,69 @@
+body{
+background-image: url(/images/3.jpg); 
+
+   }
+
+.centered {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #008080;
+}
+.container{
+    width:90%;
+    length: 80%;
+    line-height: 30px;
+    margin: 50px;
+
+}
+.contactbox{
+    background: #b76e79;
+    display:flex;
+    color: #300030;
+
+    }
+.left{
+    flex-basis:60%;
+    padding:40px 60px;
+    background-color: #b76e79;
+}
+.right{
+    flex-basis:40%;
+    padding:40px;
+    background-color: #fad6e5;
+}
+.inputrow{
+    display:flex;
+    justify-content: space-between;
+    margin: bottom 20px;
+}
+.inputrow .inputgroup{
+    flex-basis: 45%;
+}
+input{
+    width: 100%;
+    border:black;
+    border-bottom:1px solid #ccc ;
+    outline:none;
+    padding: 5px;;
+    color: #6eb7ac;
+}
+textarea{
+    width:100%;
+    border:1px solid bl;
+    outline:none;
+    padding: 10px;
+    color: #6eb7ac;
+
+}
+table{
+    color: navy;
+    padding: 20px;
+    border-spacing: 20px;
+}
+form{
+    text-emphasis-color: #489186;
+}
+.abc{
+
+    size: 40px;
+}

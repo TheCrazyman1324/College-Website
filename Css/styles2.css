@@ -24,14 +24,11 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the nav items */
-}
-
+    justify-content: center; 
 nav li {
     display: inline-block;
     margin-right: 20px;
-    position: relative; /* Required for the dropdown positioning */
-}
+    position: relative; 
 
 nav a {
     color: #fff;
