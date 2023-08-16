@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Choosing Page</title>
+  <link rel="stylesheet" href="program.css">
+</head>
+<body>
+  <div class="program-container">
+    <h1>Choose Your Program</h1>
+    <form class="program-form">
+      <label for="program">Select a Program:</label>
+      <select id="program" name="program">
+        <option value="engineering">Engineering</option>
+        <option value="business">Business</option>
+      </select>
+      
+      <div class="field-selection">
+        <label for="field">Select a Field:</label>
+        <select id="field" name="field" disabled>
+          <option>Please select a program first</option>
+        </select>
+      </div>
+      
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+  
+  <script>
+    const programSelect = document.getElementById("program");
+    const fieldSelect = document.getElementById("field");
+    const continueButton = document.querySelector("button[type='submit']");
+
+    programSelect.addEventListener("change", function() {
+      fieldSelect.disabled = false;
+      fieldSelect.innerHTML = "";
+
+      if (programSelect.value === "engineering") {
+        populateFields(["Mechanical Engineering", "Electrical Engineering", "Civil Engineering" , "Computer Science Engineering"]);
+      } else if (programSelect.value === "business") {
+        populateFields(["Marketing", "Finance", "Entrepreneurship"]);
+      }
+
+      continueButton.disabled = true;
+    });
+
+    fieldSelect.addEventListener("change", function() {
+      continueButton.disabled = false;
+    });
+
+    function populateFields(fields) {
+      fields.forEach(field => {
+        const option = document.createElement("option");
+        option.value = field.toLowerCase().replace(" ", "-");
+        option.textContent = field;
+        fieldSelect.appendChild(option);
+      });
+    }
+  document.addEventListener("DOMContentLoaded", function() {
+    const programSelect = document.getElementById("program");
+    
+    programSelect.addEventListener("change", function() {
+      const chosenProgram = programSelect.value;
+      const programDetails = {
+        program: chosenProgram
+      };
+      localStorage.setItem("chosenProgram", JSON.stringify(programDetails));
+    });
+  });
+
+  </script>
+</body>
+</html>

@@ -19,6 +19,8 @@ nav {
     background-color: #b8aeb4    ;
     color: black;
     text-align: center;
+    padding-top: 30px;
+    font-size: larger;
 }
 
 nav ul {
@@ -27,12 +29,13 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the nav items */
+    justify-content: center;
 }
 
 nav li {
     color: black;
     display: inline-block;
+    block-size: 50%;
     margin-right: 20px;
     position: relative; /* Required for the dropdown positioning */
 }

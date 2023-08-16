@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <script src="form.js" defer></script>
+    <title>Registraion Form</title>
+  </head>
+  <body>
+    <form action="#" class="form">
+      <h1 class="text-center">Registration Form</h1>
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title="Intro"
+        ></div>
+        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="ID"></div>
+        <div class="progress-step" data-title="Password"></div>
+      </div>
+
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="username">First Name</label>
+          <input type="text" name="fname" id="fname" placeholder="First Name" />
+        </div>
+        <div class="input-group">
+          <label for="position">Last Name</label>
+          <input type="text" name="lname" id="lname" placeholder="Last Name" />
+        </div>
+        <div class="">
+          <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="phone">Phone</label>
+          <input type="text" name="phone" id="phone" placeholder="Phone" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Email" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" placeholder="Date Of Birth"/>
+        </div>
+        <div class="input-group">
+          <label for="ID">Pincode</label>
+          <input type="number" name="pcode" id="pcode" placeholder="Pin Code" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password"/>
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+
+    <script>
+      const prevBtns = document.querySelectorAll(".btn-prev");
+      const nextBtns = document.querySelectorAll(".btn-next");
+      const form = document.querySelector(".form");
+      const formSteps = document.querySelectorAll(".form-step");
+      const progressSteps = document.querySelectorAll(".progress-step");
+      const progress = document.getElementById("progress");
+  
+      let formStepsNum = 0;
+  
+      nextBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          formStepsNum++;
+          updateFormSteps();
+          updateProgressbar();
+        });
+      });
+  
+      prevBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          formStepsNum--;
+          updateFormSteps();
+          updateProgressbar();
+        });
+      });
+  
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+  
+        const formData = {
+          firstName: document.getElementById("fname").value,
+          lastName: document.getElementById("lname").value,
+          phone: document.getElementById("phone").value,
+          email: document.getElementById("email").value,
+          dob: document.getElementById("dob").value,
+          pinCode: document.getElementById("pcode").value,
+          password: document.getElementById("password").value,
+        };
+  
+        localStorage.setItem("registrationData", JSON.stringify(formData));
+  
+        alert("Registration successful!");
+        window.location.href = "login.html"
+      });
+  
+      function updateFormSteps() {
+        formSteps.forEach((formStep) => {
+          formStep.classList.remove("form-step-active");
+        });
+  
+        formSteps[formStepsNum].classList.add("form-step-active");
+      }
+  
+      function updateProgressbar() {
+        progressSteps.forEach((progressStep, idx) => {
+          if (idx < formStepsNum + 1) {
+            progressStep.classList.add("progress-step-active");
+          } else {
+            progressStep.classList.remove("progress-step-active");
+          }
+        });
+  
+        const progressActive = document.querySelectorAll(".progress-step-active");
+  
+        progress.style.width =
+          ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+      }
+    </script>
+  </body>
+</html>
